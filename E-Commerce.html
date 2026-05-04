@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="e-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>E-Commerce Site</title>
+    <style>
+      .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+        font-size: 1em;
+      }
+      .footer .row > div {
+        margin-bottom: 10px;
+      }
+      .footer h4 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer ul li {
+        margin-bottom: 5px;
+      }
+      .footer ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .footer ul li a:hover {
+        color: #ccc;
+      }
+      .footer .address {
+        font-size: 0.9em;
+      }
+      /* Add spacing between Products and Footer */
+      .card-deck {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="alert alert-warning alert-dark fade show" role="alert">
+        <center><strong>Sign Up </strong> and get 20% discount on your first order.<a href="loginpage.html" style="color: rgb(106, 108, 110);">Sign Up Now</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </center>
+      </div>
+      <nav class="navbar navbar-dark bg-light ">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" width="65" height="65" class="d-inline-block align-center" alt="E-Commerce" style="border-radius: 50%;">
+          <nav class="navbar navbar-expand-lg navbar-dark">A Digital Shopping Platform
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME  <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FASHION
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="MENPAGE.html" target="_blank">MEN</a>
+                <a class="dropdown-item" href="woman.html" target="_blank">WOMEN</a>
+                <div class="dropdown-divider"></div>
+               
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="furniturepage.html" target="_blank">FURNITURE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="accessoriespage.html" target="_blank">ACCESSORIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="aboutus.html" target="_blank">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Contact_us.html" target="_blank">CONTACT</a>
+            </li>
+          </ul>
+              <!-- Login Option -->
+<a href="login.html" class="btn btn-dark">
+  <i class="fa-solid fa-user" style="color: aquamarine;"></i>
+</a>
+          <!-- Cart Option -->
+          <button type="button" class="btn btn-dark update-cart-count" id="cartButton" data-toggle="modal" data-target="#cartModal">
+            <a href="cartitem.html">
+            <i class="fa-solid fa-cart-shopping" style="color: aquamarine;"></i>
+            <span class="badge badge-light cart-count">0</span>
+            <span class="sr-only">unread messages</span></a>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="loginId">ID</label>
+                <input type="text" class="form-control" id="loginId" placeholder="Enter ID">
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul id="cartItemsList" class="list-group"></ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <a href="woman.html">
+            <img class="d-block mx-auto c-image" src="design.png" alt="First slide">
+          </a>
+        </div>
+        <div class="carousel-item c-item">
+          <a href="woman.html">
+            <img class="d-block mx-auto c-image" src="12.png" alt="Second slide">
+          </a>
+        </div>
+        <div class="carousel-item c-item">
+          <a href="MENPAGE.html">
+            <img class="d-block mx-auto c-image" src="2.png" alt="Third slide">
+          </a>
+        </div>
+        <div class="carousel-item c-item">
+          <a href="MENPAGE.html">
+            <img class="d-block mx-auto c-image" src="7.png" alt="Fourth slide">
+          </a>
+        </div>
+        <div class="carousel-item c-item">
+          <a href="MENPAGE.html">
+            <img class="d-block mx-auto c-image" src="electronic.jpg" alt="Fifth slide">
+          </a>
+        </div>
+        
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+      <div class="row">
+        <div class="col-4">
+          <div class="card p-3 text-left womencard">
+            <a href="WOMAN.html">
+              <blockquote class="blockquote mb-0">
+                <h5 style="color: black;">WOMEN</h5>
+                <h6>250 + Products</h6>
+                <div class="cardfont">
+                  <p>Blazer</p>
+                  <p>T Shirts</p>
+                  <p>Polo Dresses</p>
+                  <p>Jackets & Coats</p>
+                  <p>Jeans</p>
+                  <p>Knit</p>
+                  <p>Sarees</p>
+                </div>
+              </blockquote>
+            </a>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card p-3 text-left mencard">
+            <a href="MENPAGE.html">
+              <blockquote class="blockquote mb-0">
+                <h5 style="color: rgb(0, 0, 0);">MEN</h5>
+                <h6>250 + Products</h6>
+                <div class="cardfont">
+                  <p>Blazer</p>
+                  <p>T Shirts</p>
+                  <p>Dresses</p>
+                  <p>Jackets & Coats</p>
+                  <p>Jeans</p>
+                  <p>Accessory</p>
+                  <p>Underwear</p>
+                </div>
+              </blockquote>
+            </a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card p-3 text-left accessoriescard">
+            <a href="accessoriespage.html">
+              <blockquote class="blockquote mb-0">
+                <h5 style="color: black;">ACCESSORIES</h5>
+                <h6 style="color: blue;">50 + BRANDS ACCESSORIES</h6>
+                <div class="cardfont">
+                  <p>Airbuds</p>
+                  <p>Router</p>
+                  <p>Sound Box</p>
+                  <p>Monitor</p>
+                  <p>Keyboard & Mouse</p>
+                </div>
+              </blockquote>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+
+    </div>
+
+    <!-- Products -->
+         
+    <form action="payments.php" method="post">
+      <div class="card-deck">
+        <div class="card border-dark">
+          <img class="card-img-top" src="White Sneaker.png" alt="White Sneakers">
+          <div class="card-body">
+            <h5 class="card-title">White Sneakers</h5>
+            <p class="card-text">1199 ৳<strike>1499 ৳ </strike></p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <button type="button" class="btn btn-outline-dark btn-sm btn-buy-now" data-name="White Sneakers" data-price="1199" data-product-id="301" data-category-id="3" data-image="White Sneaker.png" data-sizes="S,M,L,XL" data-reason="One-time used" data-stock="10">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card border-dark">
+          <img class="card-img-top" src="Trouser.png" alt="Black Trouser">
+          <div class="card-body">
+            <h5 class="card-title">Black Trouser</h5>
+            <p class="card-text">1299 ৳<strike>1599 ৳ </strike></p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star-half-alt"></i>
+            </div>
+            <button type="button" class="btn btn-outline-dark btn-sm btn-buy-now" data-name="Black Trouser" data-price="1299" data-product-id="201" data-category-id="2" data-image="Trouser.png" data-sizes="M,L,XL,XXL" data-reason="Size issue" data-stock="8">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card border-dark">
+          <img class="card-img-top" src="Leather shoe.png" alt="Leather Boots">
+          <div class="card-body">
+            <h5 class="card-title">Leather Boots</h5>
+            <p class="card-text">2499 ৳<strike>2999 ৳ </strike></p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <button type="button" class="btn btn-outline-dark btn-sm btn-buy-now" data-name="Leather Boots" data-price="2499" data-product-id="302" data-category-id="3" data-image="Leather Shoe.png" data-sizes="L,XL,XXL" data-reason="One-time used" data-stock="6">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card border-dark">
+          <a href="product-details.html"><img class="card-img-top" src="jacket.png" alt="Light Brown Jacket"></a>
+          <div class="card-body">
+            <h5 class="card-title">Light Brown Jacket</h5>
+            <p class="card-text">1199 ৳<strike>1399 ৳ </strike></p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <button type="button" class="btn btn-outline-dark btn-sm btn-buy-now" data-name="Light Brown Jacket" data-price="1199" data-product-id="101" data-category-id="1" data-image="jacket.png" data-sizes="S,M,L,XL,XXL,XXXL" data-reason="Lightly used" data-stock="12">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card border-dark">
+          <img class="card-img-top" src="Dark Brown Jacket.png" alt="Dark Brown Top">
+          <div class="card-body">
+            <h5 class="card-title">Dark Brown Top</h5>
+            <p class="card-text">890 ৳<strike>999 ৳ </strike></p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <button type="button" class="btn btn-outline-dark btn-sm btn-buy-now" data-name="Dark Brown Top" data-price="890" data-image="Dark Brown Jacket.png" data-product-id="102" data-category-id="1" data-sizes="S,M,L" data-reason="Size issue" data-stock="7">Add to Cart</button>
+          </div>
+        </div>
+        <!-- New Mobile Product -->
+       <div class="card border-dark">
+  <img class="card-img-top" src="mob.png" alt="Iphone 13 Pro">
+  <div class="card-body">
+    <h5 class="card-title">Iphone 13 Pro</h5>
+    <p class="card-text">115000 ৳<strike>120000 ৳ </strike></p>
+    <div class="rating">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+    </div>
+    <button type="button" class="btn btn-outline-dark btn-sm btn-buy-now" data-name="Iphone 13 Pro" data-price="115000" data-product-id="401" data-category-id="4" data-image="mob.png" data-sizes="" data-reason="Box opened, barely used" data-stock="2">Add to Cart</button>
+  </div>
+</div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Footer -->
+     
+  <footer style="background-color: #000000; color: #ffffff; padding: 40px 0; text-align: center;">
+  <div class="container">
+    <div class="row" style="justify-content: space-between;">
+      <div style="padding: 0 15px; width: 25%;">
+        <h5 style="margin-bottom: 15px;">Useful Links</h5>
+        <ul class="list-unstyled" style="text-align: left; line-height: 2;">
+
+        <!-- Social Icons -->
+        <div>
+          <a href="https://www.facebook.com/tahmina.tashu.5" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tahminatashu_1212" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/tahmina-begum-4751493b0" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <!-- Contact -->
+         <section id="contact">
+    <h2>Contact Me</h2>
+
+    <p><i class="fa-solid fa-location-dot"></i> Hamzerbag, Chattogram, Bangladesh</p>
+    <p><i class="fa-solid fa-phone"></i> <a href="tel:01870211823">01870211823</a></p>
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:tahminatashu03@gmail.com">tahminatashu03@gmail.com</a></p>
+
+    <div class="social-icons contact-icons">
+        <a href="https://www.facebook.com/tahmina.tashu.5" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/tahminatashu_1212" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/tahmina-begum-4751493b0" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+</section>
+        <p class="mt-3">
+          📧 <a href="mailto:tahminatashu03@gmail.com">tahminatashu03@gmail.com</a><br>
+          📍 Muradpur, Chattogram, Bangladesh
+        </p>
+      </div>
+
+    </div>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-4" style="padding-top: 20px; border-top: 1px solid #ffffff;">
+      <p style="color: #ffffff; margin-bottom: 5px;">© A Digital Shopping Platform</p>
+      <p style="color: #ffffff;">Website By - Tahmina Tashu</p>
+    </div>
+  </div>
+</footer>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="resellReason"></p>
+            <div id="sizeSection" style="display:none;">
+              <label for="sizeSelect">Select Size:</label>
+              <select id="sizeSelect" class="form-control"></select>
+            </div>
+            <div>
+              <label>Quantity:</label>
+              <div class="input-group">
+                <button class="btn btn-secondary" id="minus">-</button>
+                <input type="number" id="quantity" value="1" min="1" class="form-control" style="width:50px;">
+                <button class="btn btn-secondary" id="plus">+</button>
+              </div>
+              <p id="stockInfo"></p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="addToCartModal">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+      // JavaScript for handling cart
+      const cartButton = document.getElementById('cartButton');
+      const cartCount = document.querySelector('.cart-count');
+      const cartItemsList = document.getElementById('cartItemsList');
+      const btnBuyNow = document.querySelectorAll('.btn-buy-now');
+      const totalPriceElement = document.createElement('p'); // Create element to show total price
+      totalPriceElement.id = 'totalPrice';
+
+      let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+      // Update cart count
+      const updateCartCount = () => {
+        cartCount.textContent = cartItems.length;
+      };
+
+      // Calculate total price of cart items
+      const calculateTotalPrice = () => {
+        return cartItems.reduce((total, item) => total + parseFloat(item.price), 0);
+      };
+
+      // Render cart items
+      const renderCartItems = () => {
+        if (cartItemsList) {
+          cartItemsList.innerHTML = '';
+          cartItems.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('list-group-item');
+            li.textContent = `${item.name} - ৳${item.price}`;
+            cartItemsList.appendChild(li);
+          });
+          // Show total price in the modal
+          totalPriceElement.textContent = `Total: ৳${calculateTotalPrice()}`;
+          cartItemsList.appendChild(totalPriceElement); // Append the total price to the cart list
+        }
+      };
+
+      // Add item to cart
+      const addToCart = (name, price, image, productId, categoryId) => {
+        cartItems.push({ name, price, image, productId, categoryId });
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCartCount();
+        renderCartItems();
+
+        // Update total price
+        const totalPrice = calculateTotalPrice();
+        totalPriceElement.textContent = `Total: ৳${totalPrice.toFixed(2)}`;
+      };
+
+      // Initialize cart
+      const initCart = () => {
+        updateCartCount();
+        renderCartItems();
+      };
+
+      // Event listeners for "Add to Cart" buttons
+      btnBuyNow.forEach(button => {
+        button.addEventListener('click', () => {
+          const name = button.getAttribute('data-name');
+          const price = button.getAttribute('data-price');
+          const image = button.getAttribute('data-image');
+          const product = button.getAttribute('data-product-id');
+          const category = button.getAttribute('data-category-id');
+          const sizes = button.dataset.sizes ? button.dataset.sizes.split(',') : [];
+          const reason = button.dataset.reason;
+          const stock = parseInt(button.dataset.stock);
+          document.getElementById('productModalLabel').textContent = name;
+          document.getElementById('resellReason').textContent = 'Resell Reason: ' + reason;
+          const sizeSection = document.getElementById('sizeSection');
+          const sizeSelect = document.getElementById('sizeSelect');
+          sizeSelect.innerHTML = '';
+          if (sizes.length > 0) {
+            sizeSection.style.display = 'block';
+            sizes.forEach(function(size) {
+              const option = document.createElement('option');
+              option.value = size;
+              option.textContent = size;
+              sizeSelect.appendChild(option);
+            });
+          } else {
+            sizeSection.style.display = 'none';
+          }
+          const quantity = document.getElementById('quantity');
+          quantity.max = stock;
+          quantity.value = 1;
+          document.getElementById('stockInfo').textContent = 'Available Stock: ' + stock;
+          $('#productModal').modal('show');
+
+          document.getElementById('addToCartModal').onclick = function() {
+            const qty = parseInt(quantity.value);
+            for (let i = 0; i < qty; i++) {
+              addToCart(name, price, image, product, category);
+            }
+            $('#productModal').modal('hide');
+          };
+        });
+      });
+
+      document.getElementById('minus').addEventListener('click', function() {
+        const qty = document.getElementById('quantity');
+        if (parseInt(qty.value) > 1) qty.value = parseInt(qty.value) - 1;
+      });
+
+      document.getElementById('plus').addEventListener('click', function() {
+        const qty = document.getElementById('quantity');
+        if (parseInt(qty.value) < parseInt(qty.max)) qty.value = parseInt(qty.value) + 1;
+      });
+
+      document.addEventListener('DOMContentLoaded', initCart);
+    </script>
+  </body>
+</html>
